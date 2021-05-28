@@ -1,0 +1,804 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		100A00B7266135000041AA79 /* chillEye WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 100A00B6266135000041AA79 /* chillEye WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		100A00BC266135020041AA79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 100A00BB266135020041AA79 /* Assets.xcassets */; };
+		100A00C3266135020041AA79 /* chillEye WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 100A00C2266135020041AA79 /* chillEye WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		100A00C8266135020041AA79 /* chillEyeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100A00C7266135020041AA79 /* chillEyeApp.swift */; };
+		100A00CA266135020041AA79 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100A00C9266135020041AA79 /* ContentView.swift */; };
+		100A00CC266135020041AA79 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100A00CB266135020041AA79 /* NotificationController.swift */; };
+		100A00CE266135020041AA79 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100A00CD266135020041AA79 /* NotificationView.swift */; };
+		100A00D0266135020041AA79 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100A00CF266135020041AA79 /* ComplicationController.swift */; };
+		100A00D2266135030041AA79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 100A00D1266135030041AA79 /* Assets.xcassets */; };
+		100A00D5266135030041AA79 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 100A00D4266135030041AA79 /* Preview Assets.xcassets */; };
+		100A00E1266135030041AA79 /* chillEyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100A00E0266135030041AA79 /* chillEyeTests.swift */; };
+		100A00EC266135030041AA79 /* chillEyeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100A00EB266135030041AA79 /* chillEyeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		100A00B8266135000041AA79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 100A00AC266135000041AA79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 100A00B5266135000041AA79;
+			remoteInfo = "chillEye WatchKit App";
+		};
+		100A00C4266135020041AA79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 100A00AC266135000041AA79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 100A00C1266135020041AA79;
+			remoteInfo = "chillEye WatchKit Extension";
+		};
+		100A00DD266135030041AA79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 100A00AC266135000041AA79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 100A00C1266135020041AA79;
+			remoteInfo = "chillEye WatchKit Extension";
+		};
+		100A00E8266135030041AA79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 100A00AC266135000041AA79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 100A00B5266135000041AA79;
+			remoteInfo = "chillEye WatchKit App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		100A00F3266135030041AA79 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				100A00C3266135020041AA79 /* chillEye WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100A00F7266135030041AA79 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				100A00B7266135000041AA79 /* chillEye WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		100A00B2266135000041AA79 /* chillEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chillEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		100A00B6266135000041AA79 /* chillEye WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "chillEye WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		100A00BB266135020041AA79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		100A00BD266135020041AA79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		100A00C2266135020041AA79 /* chillEye WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "chillEye WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		100A00C7266135020041AA79 /* chillEyeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chillEyeApp.swift; sourceTree = "<group>"; };
+		100A00C9266135020041AA79 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		100A00CB266135020041AA79 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		100A00CD266135020041AA79 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		100A00CF266135020041AA79 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		100A00D1266135030041AA79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		100A00D4266135030041AA79 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		100A00D6266135030041AA79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		100A00D7266135030041AA79 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		100A00DC266135030041AA79 /* chillEyeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chillEyeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		100A00E0266135030041AA79 /* chillEyeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chillEyeTests.swift; sourceTree = "<group>"; };
+		100A00E2266135030041AA79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		100A00E7266135030041AA79 /* chillEyeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chillEyeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		100A00EB266135030041AA79 /* chillEyeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chillEyeUITests.swift; sourceTree = "<group>"; };
+		100A00ED266135030041AA79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		100A00BF266135020041AA79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100A00D9266135030041AA79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100A00E4266135030041AA79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		100A00AB266135000041AA79 = {
+			isa = PBXGroup;
+			children = (
+				100A00BA266135000041AA79 /* chillEye WatchKit App */,
+				100A00C6266135020041AA79 /* chillEye WatchKit Extension */,
+				100A00DF266135030041AA79 /* chillEyeTests */,
+				100A00EA266135030041AA79 /* chillEyeUITests */,
+				100A00B3266135000041AA79 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		100A00B3266135000041AA79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				100A00B2266135000041AA79 /* chillEye.app */,
+				100A00B6266135000041AA79 /* chillEye WatchKit App.app */,
+				100A00C2266135020041AA79 /* chillEye WatchKit Extension.appex */,
+				100A00DC266135030041AA79 /* chillEyeTests.xctest */,
+				100A00E7266135030041AA79 /* chillEyeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		100A00BA266135000041AA79 /* chillEye WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				100A00BB266135020041AA79 /* Assets.xcassets */,
+				100A00BD266135020041AA79 /* Info.plist */,
+			);
+			path = "chillEye WatchKit App";
+			sourceTree = "<group>";
+		};
+		100A00C6266135020041AA79 /* chillEye WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				100A00C7266135020041AA79 /* chillEyeApp.swift */,
+				100A00C9266135020041AA79 /* ContentView.swift */,
+				100A00CB266135020041AA79 /* NotificationController.swift */,
+				100A00CD266135020041AA79 /* NotificationView.swift */,
+				100A00CF266135020041AA79 /* ComplicationController.swift */,
+				100A00D1266135030041AA79 /* Assets.xcassets */,
+				100A00D6266135030041AA79 /* Info.plist */,
+				100A00D7266135030041AA79 /* PushNotificationPayload.apns */,
+				100A00D3266135030041AA79 /* Preview Content */,
+			);
+			path = "chillEye WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		100A00D3266135030041AA79 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				100A00D4266135030041AA79 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		100A00DF266135030041AA79 /* chillEyeTests */ = {
+			isa = PBXGroup;
+			children = (
+				100A00E0266135030041AA79 /* chillEyeTests.swift */,
+				100A00E2266135030041AA79 /* Info.plist */,
+			);
+			path = chillEyeTests;
+			sourceTree = "<group>";
+		};
+		100A00EA266135030041AA79 /* chillEyeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				100A00EB266135030041AA79 /* chillEyeUITests.swift */,
+				100A00ED266135030041AA79 /* Info.plist */,
+			);
+			path = chillEyeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		100A00B1266135000041AA79 /* chillEye */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 100A00F8266135030041AA79 /* Build configuration list for PBXNativeTarget "chillEye" */;
+			buildPhases = (
+				100A00B0266135000041AA79 /* Resources */,
+				100A00F7266135030041AA79 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				100A00B9266135000041AA79 /* PBXTargetDependency */,
+			);
+			name = chillEye;
+			productName = chillEye;
+			productReference = 100A00B2266135000041AA79 /* chillEye.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		100A00B5266135000041AA79 /* chillEye WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 100A00F4266135030041AA79 /* Build configuration list for PBXNativeTarget "chillEye WatchKit App" */;
+			buildPhases = (
+				100A00B4266135000041AA79 /* Resources */,
+				100A00F3266135030041AA79 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				100A00C5266135020041AA79 /* PBXTargetDependency */,
+			);
+			name = "chillEye WatchKit App";
+			productName = "chillEye WatchKit App";
+			productReference = 100A00B6266135000041AA79 /* chillEye WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		100A00C1266135020041AA79 /* chillEye WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 100A00F0266135030041AA79 /* Build configuration list for PBXNativeTarget "chillEye WatchKit Extension" */;
+			buildPhases = (
+				100A00BE266135020041AA79 /* Sources */,
+				100A00BF266135020041AA79 /* Frameworks */,
+				100A00C0266135020041AA79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "chillEye WatchKit Extension";
+			productName = "chillEye WatchKit Extension";
+			productReference = 100A00C2266135020041AA79 /* chillEye WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		100A00DB266135030041AA79 /* chillEyeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 100A00FB266135030041AA79 /* Build configuration list for PBXNativeTarget "chillEyeTests" */;
+			buildPhases = (
+				100A00D8266135030041AA79 /* Sources */,
+				100A00D9266135030041AA79 /* Frameworks */,
+				100A00DA266135030041AA79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				100A00DE266135030041AA79 /* PBXTargetDependency */,
+			);
+			name = chillEyeTests;
+			productName = chillEyeTests;
+			productReference = 100A00DC266135030041AA79 /* chillEyeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		100A00E6266135030041AA79 /* chillEyeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 100A00FE266135030041AA79 /* Build configuration list for PBXNativeTarget "chillEyeUITests" */;
+			buildPhases = (
+				100A00E3266135030041AA79 /* Sources */,
+				100A00E4266135030041AA79 /* Frameworks */,
+				100A00E5266135030041AA79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				100A00E9266135030041AA79 /* PBXTargetDependency */,
+			);
+			name = chillEyeUITests;
+			productName = chillEyeUITests;
+			productReference = 100A00E7266135030041AA79 /* chillEyeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		100A00AC266135000041AA79 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					100A00B1266135000041AA79 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					100A00B5266135000041AA79 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					100A00C1266135020041AA79 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					100A00DB266135030041AA79 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 100A00C1266135020041AA79;
+					};
+					100A00E6266135030041AA79 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 100A00B5266135000041AA79;
+					};
+				};
+			};
+			buildConfigurationList = 100A00AF266135000041AA79 /* Build configuration list for PBXProject "chillEye" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 100A00AB266135000041AA79;
+			productRefGroup = 100A00B3266135000041AA79 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				100A00B1266135000041AA79 /* chillEye */,
+				100A00B5266135000041AA79 /* chillEye WatchKit App */,
+				100A00C1266135020041AA79 /* chillEye WatchKit Extension */,
+				100A00DB266135030041AA79 /* chillEyeTests */,
+				100A00E6266135030041AA79 /* chillEyeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		100A00B0266135000041AA79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100A00B4266135000041AA79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100A00BC266135020041AA79 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100A00C0266135020041AA79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100A00D5266135030041AA79 /* Preview Assets.xcassets in Resources */,
+				100A00D2266135030041AA79 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100A00DA266135030041AA79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100A00E5266135030041AA79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		100A00BE266135020041AA79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100A00CC266135020041AA79 /* NotificationController.swift in Sources */,
+				100A00CA266135020041AA79 /* ContentView.swift in Sources */,
+				100A00D0266135020041AA79 /* ComplicationController.swift in Sources */,
+				100A00C8266135020041AA79 /* chillEyeApp.swift in Sources */,
+				100A00CE266135020041AA79 /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100A00D8266135030041AA79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100A00E1266135030041AA79 /* chillEyeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100A00E3266135030041AA79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100A00EC266135030041AA79 /* chillEyeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		100A00B9266135000041AA79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 100A00B5266135000041AA79 /* chillEye WatchKit App */;
+			targetProxy = 100A00B8266135000041AA79 /* PBXContainerItemProxy */;
+		};
+		100A00C5266135020041AA79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 100A00C1266135020041AA79 /* chillEye WatchKit Extension */;
+			targetProxy = 100A00C4266135020041AA79 /* PBXContainerItemProxy */;
+		};
+		100A00DE266135030041AA79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 100A00C1266135020041AA79 /* chillEye WatchKit Extension */;
+			targetProxy = 100A00DD266135030041AA79 /* PBXContainerItemProxy */;
+		};
+		100A00E9266135030041AA79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 100A00B5266135000041AA79 /* chillEye WatchKit App */;
+			targetProxy = 100A00E8266135030041AA79 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		100A00EE266135030041AA79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		100A00EF266135030041AA79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		100A00F1266135030041AA79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"chillEye WatchKit Extension/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "chillEye WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "blsr3-academy.ufpe.br.chillEye.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		100A00F2266135030041AA79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"chillEye WatchKit Extension/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "chillEye WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "blsr3-academy.ufpe.br.chillEye.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		100A00F5266135030041AA79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = chillEye_WatchKit_Extension;
+				INFOPLIST_FILE = "chillEye WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "blsr3-academy.ufpe.br.chillEye.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		100A00F6266135030041AA79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = chillEye_WatchKit_Extension;
+				INFOPLIST_FILE = "chillEye WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "blsr3-academy.ufpe.br.chillEye.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		100A00F9266135030041AA79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "blsr3-academy.ufpe.br.chillEye";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		100A00FA266135030041AA79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "blsr3-academy.ufpe.br.chillEye";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		100A00FC266135030041AA79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = chillEyeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "blsr3-academy.ufpe.br.chillEyeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chillEye WatchKit Extension.appex/chillEye WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		100A00FD266135030041AA79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = chillEyeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "blsr3-academy.ufpe.br.chillEyeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chillEye WatchKit Extension.appex/chillEye WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		100A00FF266135030041AA79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = chillEyeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "blsr3-academy.ufpe.br.chillEyeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "chillEye WatchKit App";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		100A0100266135030041AA79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = chillEyeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "blsr3-academy.ufpe.br.chillEyeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "chillEye WatchKit App";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		100A00AF266135000041AA79 /* Build configuration list for PBXProject "chillEye" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100A00EE266135030041AA79 /* Debug */,
+				100A00EF266135030041AA79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		100A00F0266135030041AA79 /* Build configuration list for PBXNativeTarget "chillEye WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100A00F1266135030041AA79 /* Debug */,
+				100A00F2266135030041AA79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		100A00F4266135030041AA79 /* Build configuration list for PBXNativeTarget "chillEye WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100A00F5266135030041AA79 /* Debug */,
+				100A00F6266135030041AA79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		100A00F8266135030041AA79 /* Build configuration list for PBXNativeTarget "chillEye" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100A00F9266135030041AA79 /* Debug */,
+				100A00FA266135030041AA79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		100A00FB266135030041AA79 /* Build configuration list for PBXNativeTarget "chillEyeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100A00FC266135030041AA79 /* Debug */,
+				100A00FD266135030041AA79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		100A00FE266135030041AA79 /* Build configuration list for PBXNativeTarget "chillEyeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100A00FF266135030041AA79 /* Debug */,
+				100A0100266135030041AA79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 100A00AC266135000041AA79 /* Project object */;
+}
