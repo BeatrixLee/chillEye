@@ -10,18 +10,20 @@ import SwiftUI
 
 // MARK: - Tela completa de onboarding
 struct OnboardingView: View {
+
+//    @State var date = Date()
+//    var timeFormat: DateFormatter {
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "hh:mm"
+//        return formatter
+//    }
     
-    @State var date = Date()
-    var timeFormat: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "hh:mm"
-        return formatter
-    }
+//    func timeString(date: Date) -> String {
+//        let time = timeFormat.string(from: date)
+//        return time
+//    }
     
-    func timeString(date: Date) -> String {
-        let time = timeFormat.string(from: date)
-        return time
-    }
+    @State var presentExercises = false
     
     @State var imagesOnboarding = ["onboardingUm","onboardingDois"]
     @State var descsOnboarding = ["Exercitar os olhos diariamente ajuda \nno relaxamento","Mantenha a cabeça \ne corpo fixos para melhores resultados"]
@@ -30,11 +32,6 @@ struct OnboardingView: View {
     
     
     var body: some View {
-        VStack{
-            
-            NavigationView() {
-            }.navigationBarTitle("\(timeString(date: date))")
-            
             
             VStack{
                 
@@ -50,14 +47,18 @@ struct OnboardingView: View {
                     
                     withAnimation {
                         selection = 1
+                        
+                        presentExercises = true
                     }
                     
                 }, label: {
                     Text("Próximo")
                 }) .opacity(selection == 1 ? 1 : 0)
+                .fullScreenCover(isPresented: $presentExercises) {
+                    DiagonalExerciseView()
+                }
                 
             }
-        }
             
         
     }
