@@ -10,18 +10,18 @@ import SwiftUI
 
 // MARK: - Tela completa de onboarding
 struct OnboardingView: View {
-
-//    @State var date = Date()
-//    var timeFormat: DateFormatter {
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "hh:mm"
-//        return formatter
-//    }
     
-//    func timeString(date: Date) -> String {
-//        let time = timeFormat.string(from: date)
-//        return time
-//    }
+    //    @State var date = Date()
+    //    var timeFormat: DateFormatter {
+    //        let formatter = DateFormatter()
+    //        formatter.dateFormat = "hh:mm"
+    //        return formatter
+    //    }
+    
+    //    func timeString(date: Date) -> String {
+    //        let time = timeFormat.string(from: date)
+    //        return time
+    //    }
     
     @State var presentExercises = false
     
@@ -32,34 +32,19 @@ struct OnboardingView: View {
     
     
     var body: some View {
+        
+        VStack{
             
-            VStack{
-                
-                    TabView(selection: $selection) {
-                        OnboardingOneView(imagesOnboarding: $imagesOnboarding, descsOnboarding: $descsOnboarding)
-                            .tag(0)
-                        OnboardingTwoView(imagesOnboarding: $imagesOnboarding, descsOnboarding: $descsOnboarding)
-                            .tag(1)
-                    }
-                    
-                
-                Button(action: {
-                    
-                    withAnimation {
-                        selection = 1
-                        
-                        presentExercises = true
-                    }
-                    
-                }, label: {
-                    Text("Próximo")
-                }) .opacity(selection == 1 ? 1 : 0)
-                .fullScreenCover(isPresented: $presentExercises) {
-                    DiagonalExerciseView()
-                }
-                
+            TabView(selection: $selection) {
+                OnboardingOneView(imagesOnboarding: $imagesOnboarding, descsOnboarding: $descsOnboarding)
+                    .tag(0)
+                OnboardingTwoView(imagesOnboarding: $imagesOnboarding, descsOnboarding: $descsOnboarding)
+                    .tag(1)
             }
             
+            
+        }
+        
         
     }
     
@@ -68,7 +53,9 @@ struct OnboardingView: View {
         
         @Binding var imagesOnboarding: [String]
         @Binding var descsOnboarding: [String]
+       
         
+    
         var body: some View {
             
             VStack{
@@ -79,6 +66,8 @@ struct OnboardingView: View {
                     .bold()
                     .multilineTextAlignment(.center)
                     .font(.footnote)
+                
+               
             }
             
         }
@@ -91,6 +80,9 @@ struct OnboardingView: View {
         @Binding var imagesOnboarding: [String]
         @Binding var descsOnboarding: [String]
         
+        @State var presentExercises = false
+        @State private var selection = 0
+        
         var body: some View {
             VStack{
                 Image(imagesOnboarding[1])
@@ -100,8 +92,23 @@ struct OnboardingView: View {
                     .bold()
                     .multilineTextAlignment(.center)
                     .font(.footnote)
+                
+                
+                Button(action: {
+                    
+                    withAnimation {
+                        selection = 2
+                        
+                        presentExercises = true
+                    }
+                    
+                }, label: {
+                    Text("Próximo")
+                }).opacity(selection == 0 ? 1 : 0)
+                .fullScreenCover(isPresented: $presentExercises) {
+                    DiagonalExerciseView()
+                }
             }
-            
         }
         
     }

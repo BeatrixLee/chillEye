@@ -53,9 +53,7 @@ struct DiagonalExerciseView: View {
                 Text("1/3").font(.system(size: 13, weight: .regular)).foregroundColor(Color(#colorLiteral(red: 1, green: 0.9, blue: 0.13, alpha: 1))).multilineTextAlignment(.trailing)
                 
             }
-            
-            
-            
+   
         }
         .padding(EdgeInsets.init(top: 20, leading: 10, bottom: 10, trailing: 10))
         

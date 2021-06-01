@@ -13,9 +13,11 @@ struct chillEyeApp: App {
         WindowGroup {
             NavigationView {
                 OnboardingView()
+                
             }
         }
 
         WKNotificationScene(controller: NotificationController.self, category: "myCategory")
+        
     }
 }
