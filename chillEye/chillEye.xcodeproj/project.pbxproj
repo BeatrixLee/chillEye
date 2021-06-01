@@ -638,6 +638,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YT3CV5CM6F;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "blsr3-academy.ufpe.br.chillEye";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -650,6 +651,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YT3CV5CM6F;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "blsr3-academy.ufpe.br.chillEye";
 				PRODUCT_NAME = "$(TARGET_NAME)";
