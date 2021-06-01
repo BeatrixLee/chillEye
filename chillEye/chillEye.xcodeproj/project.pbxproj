@@ -19,6 +19,7 @@
 		100A00D5266135030041AA79 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 100A00D4266135030041AA79 /* Preview Assets.xcassets */; };
 		100A00E1266135030041AA79 /* chillEyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100A00E0266135030041AA79 /* chillEyeTests.swift */; };
 		100A00EC266135030041AA79 /* chillEyeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100A00EB266135030041AA79 /* chillEyeUITests.swift */; };
+		8BE3DB9526654B2C0020A6E4 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE3DB9426654B2C0020A6E4 /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		100A00E7266135030041AA79 /* chillEyeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chillEyeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		100A00EB266135030041AA79 /* chillEyeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chillEyeUITests.swift; sourceTree = "<group>"; };
 		100A00ED266135030041AA79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BE3DB9426654B2C0020A6E4 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			children = (
 				100A00C7266135020041AA79 /* chillEyeApp.swift */,
 				100A00C9266135020041AA79 /* ContentView.swift */,
+				8BE3DB9426654B2C0020A6E4 /* OnboardingView.swift */,
 				100A00CB266135020041AA79 /* NotificationController.swift */,
 				100A00CD266135020041AA79 /* NotificationView.swift */,
 				100A00CF266135020041AA79 /* ComplicationController.swift */,
@@ -388,6 +391,7 @@
 				100A00CC266135020041AA79 /* NotificationController.swift in Sources */,
 				100A00CA266135020041AA79 /* ContentView.swift in Sources */,
 				100A00D0266135020041AA79 /* ComplicationController.swift in Sources */,
+				8BE3DB9526654B2C0020A6E4 /* OnboardingView.swift in Sources */,
 				100A00C8266135020041AA79 /* chillEyeApp.swift in Sources */,
 				100A00CE266135020041AA79 /* NotificationView.swift in Sources */,
 			);
@@ -638,7 +642,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YT3CV5CM6F;
+				DEVELOPMENT_TEAM = R9YW8SQC7S;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "blsr3-academy.ufpe.br.chillEye";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -651,7 +655,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YT3CV5CM6F;
+				DEVELOPMENT_TEAM = R9YW8SQC7S;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "blsr3-academy.ufpe.br.chillEye";
 				PRODUCT_NAME = "$(TARGET_NAME)";
