@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import UserNotifications
 
 // MARK: - Tela completa de onboarding
 struct OnboardingView: View {
@@ -32,6 +33,38 @@ struct OnboardingView: View {
     
     
     var body: some View {
+        
+        VStack {
+            Button("Request Permission") {
+                UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+                    if success {
+                        print("All set!")
+                    } else if let error = error {
+                        print(error.localizedDescription)
+                    }
+                }
+            }
+
+            Button("Schedule Notification") {
+                
+                var dateComponents = DateComponents()
+                dateComponents.hour = 21
+                dateComponents.minute = 24
+                
+                let content = UNMutableNotificationContent()
+                content.title = "Descanse seus \nolhos por um \nmomento!"
+                
+                content.sound = UNNotificationSound.default
+
+                // show this notification at a specific time
+                let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+
+                // choose a random identifier
+                let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+
+                // add our notification request
+                UNUserNotificationCenter.current().add(request)            }
+        }
         
         VStack{
             

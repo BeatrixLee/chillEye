@@ -1,7 +1,7 @@
 {
     "aps": {
         "alert": {
-            "body": "Test message",
+            "body": "Tenha um momento para descansar seus olhos!",
             "title": "Optional title",
             "subtitle": "Optional subtitle"
         },

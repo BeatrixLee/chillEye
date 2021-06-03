@@ -8,9 +8,19 @@
 import SwiftUI
 
 struct NotificationView: View {
+    
+    var message: String?
+    
     var body: some View {
-        Text("Hello, World!")
+        
+        VStack {
+            
+//            Text(message ?? "Tenha um momento para descansar seus olhos!").font(.caption)
+        }
+        
     }
+    
+    
 }
 
 struct NotificationView_Previews: PreviewProvider {
