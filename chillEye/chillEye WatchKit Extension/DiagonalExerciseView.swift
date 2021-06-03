@@ -6,15 +6,42 @@
 //
 
 import SwiftUI
+import Combine
+
+
+
 
 struct DiagonalExerciseView: View {
     
     @State var presentExercises = false
     @State var timeRemaining = 30
+    @State var isAnimation: Bool = false
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-
     
+    private let images = (1...4).map { String(format: "Diagonal%d", $0) }.map { Image($0) }
+    
+    struct AnimatingImage: View {
+        let images: [Image]
+
+        @ObservedObject private var counter = Counter(interval: 0.30)
+
+        var body: some View {
+            images[counter.value % images.count]
+        }
+    }
+
+    private class Counter: ObservableObject {
+        private var timer: Timer?
+
+        @Published var value: Int = 0
+
+        init(interval: Double) {
+            timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { _ in self.value += 1 }
+        }
+    }
+    
+  
     var body: some View {
         VStack {
             HStack {
@@ -28,10 +55,11 @@ struct DiagonalExerciseView: View {
             }
             
             VStack {
+            
                 
-                Text("animation placeholder")
-                    .padding(.bottom, 20)
-                    .padding(.top, 20)
+                AnimatingImage(images: images)
+                    .padding(.top, 10)
+        
                 
                 Text("Mova seus olhos \nna diagonal")
                     
@@ -68,9 +96,12 @@ struct DiagonalExerciseView: View {
         } .fullScreenCover(isPresented: $presentExercises) {
             EightExercise()
         }
-        
+
     }
 }
+
+
+
 
 
 struct ContentView_Previews: PreviewProvider {
