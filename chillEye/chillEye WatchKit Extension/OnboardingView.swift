@@ -34,18 +34,13 @@ struct OnboardingView: View {
     var body: some View {
         
         VStack{
-            
             TabView(selection: $selection) {
                 OnboardingOneView(imagesOnboarding: $imagesOnboarding, descsOnboarding: $descsOnboarding)
                     .tag(0)
                 OnboardingTwoView(imagesOnboarding: $imagesOnboarding, descsOnboarding: $descsOnboarding)
                     .tag(1)
             }
-            
-            
         }
-        
-        
     }
     
     // MARK: - Tela completa de onboarding 1
@@ -53,9 +48,8 @@ struct OnboardingView: View {
         
         @Binding var imagesOnboarding: [String]
         @Binding var descsOnboarding: [String]
-       
         
-    
+
         var body: some View {
             
             VStack{
@@ -67,7 +61,7 @@ struct OnboardingView: View {
                     .multilineTextAlignment(.center)
                     .font(.footnote)
                 
-               
+                
             }
             
         }
@@ -88,10 +82,14 @@ struct OnboardingView: View {
                 Image(imagesOnboarding[1])
                     .resizable()
                     .frame(width: 80, height: 40)
+                
                 Text(descsOnboarding[1])
                     .bold()
                     .multilineTextAlignment(.center)
                     .font(.footnote)
+                    .frame(width: 152, height: 50, alignment: .center)
+                    .padding(.bottom, 10)
+                
                 
                 
                 Button(action: {
@@ -105,9 +103,11 @@ struct OnboardingView: View {
                 }, label: {
                     Text("Próximo")
                 }).opacity(selection == 0 ? 1 : 0)
+                .padding(.top, 5)
                 .fullScreenCover(isPresented: $presentExercises) {
                     DiagonalExerciseView()
                 }
+                
             }
         }
         

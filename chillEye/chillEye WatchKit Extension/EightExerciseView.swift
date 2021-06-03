@@ -59,6 +59,7 @@ struct EightExercise: View {
             
         }
         .padding(EdgeInsets.init(top: 20, leading: 10, bottom: 10, trailing: 10))
+        .navigationBarHidden(true)
         
         .onReceive(timer) { time in
             if self.timeRemaining > 0 {
