@@ -8,8 +8,9 @@
 import Foundation
 import SwiftUI
 
+
 struct MassageExercise: View {
-    
+
     @State var presentExercises = false
     @State var timeRemaining = 20
     
@@ -60,7 +61,8 @@ struct MassageExercise: View {
             
         }
         .padding(EdgeInsets.init(top: 20, leading: 10, bottom: 10, trailing: 10))
-        
+        .navigationBarHidden(true)
+
         .onReceive(timer) { time in
             if self.timeRemaining > 0 {
                 self.timeRemaining -= 1

@@ -6,17 +6,50 @@
 //
 
 import SwiftUI
+import Combine
+
 
 struct DiagonalExerciseView: View {
     
     @State var presentExercises = false
     @State var timeRemaining = 30
+    @State var isAnimation: Bool = false
     
+    
+   
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-
+    
+    private let images = (0...32).map { String(format: "diagonal%d", $0) }.map { Image($0) }
+    
+    struct AnimatingImage: View {
+        let images: [Image]
+        
+        @ObservedObject private var counter = Counter(interval: 0.035)
+        
+        var body: some View {
+            images[counter.value % images.count]
+                .resizable()
+                .scaledToFit()
+                .frame(width: 80, height: 57, alignment: .center)
+            
+        }
+    }
+    
+    private class Counter: ObservableObject {
+        private var timer: Timer?
+        
+        @Published var value: Int = 0
+        
+        init(interval: Double) {
+            timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { _ in self.value += 1 }
+        }
+    }
     
     var body: some View {
+        
+      
         VStack {
+            
             HStack {
                 
                 
@@ -24,14 +57,18 @@ struct DiagonalExerciseView: View {
                     .padding(.trailing, 20)
                 
                 
-                Text("00:\(timeRemaining)").font(.system(size: 16, weight: .semibold)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))).multilineTextAlignment(.trailing)
+                Text("00:\(timeRemaining)")
+                    .font(.system(size: 16, weight: .semibold)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))).multilineTextAlignment(.trailing)
+                
+
             }
             
+
             VStack {
                 
-                Text("animation placeholder")
-                    .padding(.bottom, 20)
-                    .padding(.top, 20)
+                
+                AnimatingImage(images: images)
+                
                 
                 Text("Mova seus olhos \nna diagonal")
                     
@@ -39,7 +76,7 @@ struct DiagonalExerciseView: View {
                     .bold()
                     .multilineTextAlignment(.center)
                     .frame(width: 116, height: 35, alignment: .center)
-                    .padding(EdgeInsets.init(top: 5, leading: 0, bottom: 0, trailing: 0))
+                 
                 
             }
             .padding(.bottom, 10)
@@ -53,9 +90,10 @@ struct DiagonalExerciseView: View {
                 Text("1/3").font(.system(size: 13, weight: .regular)).foregroundColor(Color(#colorLiteral(red: 1, green: 0.9, blue: 0.13, alpha: 1))).multilineTextAlignment(.trailing)
                 
             }
-   
+            
         }
         .padding(EdgeInsets.init(top: 20, leading: 10, bottom: 10, trailing: 10))
+        .navigationBarHidden(true)
         
         
         
