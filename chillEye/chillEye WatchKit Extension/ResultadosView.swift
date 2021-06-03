@@ -100,10 +100,11 @@ struct ResultadosView: View {
             .padding(.bottom, 10)
             Button(action: {
                 
+                presentExercises = true
+                
             }, label: {
                 Text("Repetir")
             })
-            
             .fullScreenCover(isPresented: $presentExercises) {
                                 DiagonalExerciseView()
                             }
@@ -112,6 +113,8 @@ struct ResultadosView: View {
             
         }
         .padding(.top, 20)
+        .navigationBarHidden(true)
+
         
     }
 }

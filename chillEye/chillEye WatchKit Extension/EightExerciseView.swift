@@ -15,6 +15,8 @@ struct EightExercise: View {
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
+    private let images = (0...63).map { String(format: "oito%d", $0) }.map { Image($0) }
+    
     var body: some View {
         VStack {
             HStack {
@@ -30,8 +32,7 @@ struct EightExercise: View {
             
             VStack {
                 
-                Text("animation placeholder")
-                    .padding(.top, 20)
+                AnimatingImage(images: images)
                 
                 
                 Text("Desenhe um 8 no ar com o polegar e acompanhe com sua visão")
@@ -43,7 +44,6 @@ struct EightExercise: View {
                     .padding(EdgeInsets.init(top: 0, leading: 0, bottom: 0, trailing: 0))
                 
             }
-            .padding(.bottom, 20)
             
             ZStack {
                 
@@ -69,6 +69,30 @@ struct EightExercise: View {
             }
         } .fullScreenCover(isPresented: $presentExercises) {
             MassageExercise()
+        }
+    }
+    
+    struct AnimatingImage: View {
+        let images: [Image]
+        
+        @ObservedObject private var counter = Counter(interval: 0.015)
+        
+        var body: some View {
+            images[Int(counter.value) % images.count]
+                .resizable()
+                .scaledToFit()
+                .frame(width: 80, height: 57, alignment: .center)
+            
+        }
+    }
+    
+    private class Counter: ObservableObject {
+        private var timer: Timer?
+        
+        @Published var value: Int = 0
+        
+        init(interval: Double) {
+            timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { _ in self.value += 1 }
         }
     }
 }

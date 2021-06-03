@@ -11,33 +11,23 @@ import SwiftUI
 // MARK: - Tela completa de onboarding
 struct OnboardingView: View {
     
-    //    @State var date = Date()
-    //    var timeFormat: DateFormatter {
-    //        let formatter = DateFormatter()
-    //        formatter.dateFormat = "hh:mm"
-    //        return formatter
-    //    }
-    
-    //    func timeString(date: Date) -> String {
-    //        let time = timeFormat.string(from: date)
-    //        return time
-    //    }
+
     
     @State var presentExercises = false
     
-    @State var imagesOnboarding = ["onboardingUm","onboardingDois"]
     @State var descsOnboarding = ["Exercitar os olhos diariamente ajuda \nno relaxamento","Mantenha a cabeça \ne corpo fixos para melhores resultados"]
     
     @State private var selection = 0
+   
     
     
     var body: some View {
         
         VStack{
             TabView(selection: $selection) {
-                OnboardingOneView(imagesOnboarding: $imagesOnboarding, descsOnboarding: $descsOnboarding)
+                OnboardingOneView(descsOnboarding: $descsOnboarding)
                     .tag(0)
-                OnboardingTwoView(imagesOnboarding: $imagesOnboarding, descsOnboarding: $descsOnboarding)
+                OnboardingTwoView(descsOnboarding: $descsOnboarding)
                     .tag(1)
             }
         }
@@ -46,16 +36,17 @@ struct OnboardingView: View {
     // MARK: - Tela completa de onboarding 1
     struct OnboardingOneView: View {
         
-        @Binding var imagesOnboarding: [String]
         @Binding var descsOnboarding: [String]
+        
+        private let images = (0...63).map { String(format: "oito%d", $0) }.map { Image($0) }
         
 
         var body: some View {
             
             VStack{
-                Image(imagesOnboarding[0])
-                    .resizable()
-                    .frame(width: 80, height: 40)
+                
+                AnimatingImage(images: images)
+
                 Text(descsOnboarding[0])
                     .bold()
                     .multilineTextAlignment(.center)
@@ -71,24 +62,24 @@ struct OnboardingView: View {
     // MARK: - Tela completa de onboarding 1
     struct OnboardingTwoView: View {
         
-        @Binding var imagesOnboarding: [String]
         @Binding var descsOnboarding: [String]
         
         @State var presentExercises = false
         @State private var selection = 0
         
+        private let images = (0...47).map { String(format: "massagem%d", $0) }.map { Image($0) }
+        
+        
         var body: some View {
             VStack{
-                Image(imagesOnboarding[1])
-                    .resizable()
-                    .frame(width: 80, height: 40)
                 
+                AnimatingImage(images: images)
+
                 Text(descsOnboarding[1])
                     .bold()
                     .multilineTextAlignment(.center)
                     .font(.footnote)
                     .frame(width: 152, height: 50, alignment: .center)
-                    .padding(.bottom, 10)
                 
                 
                 
@@ -111,6 +102,30 @@ struct OnboardingView: View {
             }
         }
         
+    }
+    
+    struct AnimatingImage: View {
+        let images: [Image]
+        
+        @ObservedObject private var counter = Counter(interval: 0.035)
+        
+        var body: some View {
+            images[counter.value % images.count]
+                .resizable()
+                .scaledToFit()
+                .frame(width: 80, height: 57, alignment: .center)
+            
+        }
+    }
+    
+    private class Counter: ObservableObject {
+        private var timer: Timer?
+        
+        @Published var value: Int = 0
+        
+        init(interval: Double) {
+            timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { _ in self.value += 1 }
+        }
     }
     
 }

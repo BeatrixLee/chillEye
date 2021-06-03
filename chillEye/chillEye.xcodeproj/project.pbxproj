@@ -572,7 +572,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"chillEye WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = MWUZ9DKMH6;
+				DEVELOPMENT_TEAM = YT3CV5CM6F;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "chillEye WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -597,7 +597,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"chillEye WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = MWUZ9DKMH6;
+				DEVELOPMENT_TEAM = YT3CV5CM6F;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "chillEye WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

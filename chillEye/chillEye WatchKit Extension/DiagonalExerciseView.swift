@@ -13,46 +13,17 @@ struct DiagonalExerciseView: View {
     
     @State var presentExercises = false
     @State var timeRemaining = 30
-    @State var isAnimation: Bool = false
     
-    
-   
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     private let images = (0...32).map { String(format: "diagonal%d", $0) }.map { Image($0) }
-    
-    struct AnimatingImage: View {
-        let images: [Image]
-        
-        @ObservedObject private var counter = Counter(interval: 0.035)
-        
-        var body: some View {
-            images[counter.value % images.count]
-                .resizable()
-                .scaledToFit()
-                .frame(width: 80, height: 57, alignment: .center)
-            
-        }
-    }
-    
-    private class Counter: ObservableObject {
-        private var timer: Timer?
-        
-        @Published var value: Int = 0
-        
-        init(interval: Double) {
-            timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { _ in self.value += 1 }
-        }
-    }
-    
+   
     var body: some View {
         
-      
         VStack {
             
             HStack {
-                
-                
+     
                 Text("Diagonal").font(.system(size: 16, weight: .medium)).foregroundColor(Color(#colorLiteral(red: 1, green: 0.9, blue: 0.13, alpha: 1)))
                     .padding(.trailing, 20)
                 
@@ -60,10 +31,8 @@ struct DiagonalExerciseView: View {
                 Text("00:\(timeRemaining)")
                     .font(.system(size: 16, weight: .semibold)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))).multilineTextAlignment(.trailing)
                 
-
             }
             
-
             VStack {
                 
                 
@@ -106,8 +75,31 @@ struct DiagonalExerciseView: View {
         } .fullScreenCover(isPresented: $presentExercises) {
             EightExercise()
         }
-        
     }
+    
+     struct AnimatingImage: View {
+         let images: [Image]
+         
+         @ObservedObject private var counter = Counter(interval: 0.035)
+         
+         var body: some View {
+             images[counter.value % images.count]
+                 .resizable()
+                 .scaledToFit()
+                 .frame(width: 80, height: 57, alignment: .center)
+             
+         }
+     }
+     
+     private class Counter: ObservableObject {
+         private var timer: Timer?
+         
+         @Published var value: Int = 0
+         
+         init(interval: Double) {
+             timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { _ in self.value += 1 }
+         }
+     }
 }
 
 

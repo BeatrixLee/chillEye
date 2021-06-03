@@ -16,6 +16,9 @@ struct MassageExercise: View {
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
+    private let images = (0...47).map { String(format: "massagem%d", $0) }.map { Image($0) }
+    
+    
     var body: some View {
         VStack {
             
@@ -31,9 +34,8 @@ struct MassageExercise: View {
             
             VStack {
                 
-                Text("animation placeholder")
-                    .padding(.bottom, 20)
-                    .padding(.top, 20)
+                AnimatingImage(images: images)
+
                 
                 Text("Massageie os olhos com os polegares")
                     
@@ -73,7 +75,32 @@ struct MassageExercise: View {
             ResultadosView()
         }
     }
+    
+    struct AnimatingImage: View {
+        let images: [Image]
+        
+        @ObservedObject private var counter = Counter(interval: 0.020)
+        
+        var body: some View {
+            images[Int(counter.value) % images.count]
+                .resizable()
+                .scaledToFit()
+                .frame(width: 80, height: 57, alignment: .center)
+            
+        }
+    }
+    
+    private class Counter: ObservableObject {
+        private var timer: Timer?
+        
+        @Published var value: Int = 0
+        
+        init(interval: Double) {
+            timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { _ in self.value += 1 }
+        }
+    }
 }
+
 
 struct MassageExercise_Previews: PreviewProvider {
     static var previews: some View {
