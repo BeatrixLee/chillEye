@@ -68,7 +68,7 @@ struct MassageExercise: View {
                 presentExercises = true
             }
         } .fullScreenCover(isPresented: $presentExercises) {
-            DiagonalExerciseView()
+            ResultadosView()
         }
     }
 }
